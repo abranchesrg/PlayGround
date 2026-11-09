@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#101a20" />
+  <title>Neon Coast — Isometric City</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <canvas id="game" aria-label="Neon Coast isometric open-world game"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">NC</span><div><b>NEON COAST</b><small>FREE ROAM · SAN PALOMA</small></div></div>
+      <div class="district-tag"><i></i><span id="district">MIRAGE DOWNTOWN</span></div>
+      <button id="map-toggle" class="icon-btn" aria-label="Toggle map">⌖</button>
+    </header>
+    <section class="hud-left">
+      <div class="status-card"><div class="status-title"><span>VITALS</span><b id="health-value">100</b></div><div class="meter"><i id="health-bar"></i></div><div class="status-title cash-line"><span>POCKET CASH</span><b id="cash">$2,450</b></div></div>
+      <div class="objective-card"><span class="eyebrow">CITY OPPORTUNITY</span><b id="objective">A little neighborhood favor</b><p id="objective-copy">Pick up the glowing drop nearby.</p><div class="objective-reward"><span>REWARD</span><b>$750</b></div></div>
+    </section>
+    <section class="hud-right">
+      <div class="wanted-card"><span class="eyebrow">WANTED</span><div class="stars" id="stars">☆ ☆ ☆ ☆ ☆</div><small id="wanted-note">Keep it clean, or don't.</small></div>
+      <div class="minimap-frame"><canvas id="minimap" width="180" height="180"></canvas><span class="map-label">SAN PALOMA</span></div>
+    </section>
+    <footer class="bottom-hud"><div class="controls-hint"><kbd>WASD</kbd><span>MOVE</span><kbd>SHIFT</kbd><span>SPRINT</span><kbd>E</kbd><span>ENTER</span><kbd>SPACE</kbd><span>ACTION</span></div><div class="clock"><span class="sun-icon" id="weather-icon">☀</span><b id="clock">16:42</b><span id="weather">CLEAR</span></div></footer>
+    <div id="toast" class="toast"></div>
+    <div id="intro" class="intro"><div class="intro-card"><div class="intro-kicker">WELCOME TO THE COAST</div><h1>Your city.<br><em>Your rules.</em></h1><p>Sunset is free. So is the whole city. Find the glowing pickup, explore San Paloma, and try not to make the news.</p><button id="start">STEP INTO THE CITY <span>→</span></button><div class="intro-foot">WASD / ARROWS TO MOVE <i>•</i> E TO ENTER CARS <i>•</i> SPACE TO ACT</div></div></div>
+    <div id="help" class="help-panel"><button id="close-help" aria-label="Close">×</button><b>HOW TO PLAY</b><p>Walk with <kbd>WASD</kbd> or the arrow keys. <kbd>Shift</kbd> to sprint. Walk up to a car and press <kbd>E</kbd> to drive. <kbd>E</kbd> again to hop out. <kbd>Space</kbd> fires a warning shot (and attracts attention).</p><p>Pick up the glowing parcel for cash. Lose the cops by breaking line of sight and laying low.</p></div>
+    <div class="touch-controls" aria-label="Touch controls"><div class="dpad"><button data-key="up">▲</button><div><button data-key="left">◀</button><button data-key="down">▼</button><button data-key="right">▶</button></div></div><div class="touch-actions"><button data-action="act" class="action-btn">ACT</button><button data-action="enter" class="enter-btn">DRIVE</button></div></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
